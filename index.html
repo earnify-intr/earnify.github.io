@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnify</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #2596be;
+            color: gainsboro;
+        }
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #f6f3f3;
+        }
+
+        /* Hamburger menu icon */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+        }
+
+        /* Navigation menu */
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #f6f3f3;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive styles for the hamburger menu */
+        @media screen and (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 10px 0;
+            }
+
+            nav a {
+                padding: 10px 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav.active {
+                display: flex;
+            }
+        }
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-stack img {
+            width: 80%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+         /* Basic footer styling */
+         footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+   <header>
+        <h1>Welcome to Earnify</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navMenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
+
+    <div class="image-stack">
+        <img src="eanify dashboard.png" alt="Image 1">
+        <img src="earnifyadvert.png" alt="Image 2">
+        <img src="earnify join.png" alt="Image 3">
+    </div>
+    <footer>
+        <p>&copy; 2025 Earnify. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Us</a>
+        </p>
+    </footer>
+</body>
+</html>
